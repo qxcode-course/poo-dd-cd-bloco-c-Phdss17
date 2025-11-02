@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-28_16-13-49",
+            "content": "class Foo:\n    def __init__(self, x: int):\n        self.x = x\n\n    def __str__(self):\n        return f'Foo({self.x})'\n\nlista_vazia: list[int] = []\nlista_preenchida: list[int] = [1, 2, 3, 4, 5]\nlista_preenchida_objetos: list[Foo] = [Foo(1), Foo(2), Foo(3), Foo(4), Foo(5)]\n\nlista_vazia.append(1)\nlista_preenchida_objetos.append(Foo(6))",
+            "lines": "13"
+        }
+    ]
+}

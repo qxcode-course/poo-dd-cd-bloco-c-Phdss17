@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-31_13-12-05",
+            "content": "class client:\n    def __init__(self, nome: str) -> None:\n        self.__nome: str = nome\n\n    def getNome(self) -> str:\n        return self.__nome\n    \n    def __str__(self) -> str:\n        return self.__nome\n    \n\nclass market:\n    def __init__(self, num_count: int) -> None:\n        self.__counters: list[client | None] = []\n        self.__waiting: list[client] = []\n        self.__numCount: int = num_count\n\n        for _ in range(num_count):\n            self.__counters.append(None)\n\n    def arrive(self, c: client) -> None:\n        self.__waiting.append(c)\n\n    def __str__(self) -> str:\n        return f\"Caixas: [{[x.getNome() if x is not None else \"-----\" for x in self.__counters]}] \\n Espera: [{[x.getNome() for x in self.__waiting]}]\"\n\n\nc = client(\"cesar\")\nc2 = client(\"yasmin\")\nc3 = client(\"banza\")\nc4 = client(\"vic\")\n\nm = market(4)\n\nm.arrive(c)\nm.arrive(c2)\nm.arrive(c3)\nm.arrive(c4)\n\nprint(m)",
+            "lines": "40"
+        }
+    ]
+}

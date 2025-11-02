@@ -1,0 +1,2 @@
+
+[x.getNome() if x is not None else "-----" for x in self.__counters]

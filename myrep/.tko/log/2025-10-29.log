@@ -1,0 +1,3 @@
+2025-10-29 15:47:27, MOVE, v:1, k:poo@tabuleiro, mode:PICK
+2025-10-29 15:47:35, EXEC, v:1, k:poo@tabuleiro, mode:FREE, size:0
+2025-10-29 15:47:53, MOVE, v:1, k:poo@tabuleiro, mode:BACK
